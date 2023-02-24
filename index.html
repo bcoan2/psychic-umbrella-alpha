@@ -1,25 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - alpha-lab</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Boring name game</title>
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1" />
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<h2>Enter in your name</h2>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="container-fluid">
+   
+   
 
-<label for="fname">username:</label>
-<input type="text" id="fname" name="fname"><br>
+    <div class="row">
 
-<button id="sendName">Click me!</button>
+      <!-- Game Card -->
+      <div class="col-sm-8 offset-sm-2">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">Enter your name</p>
 
-<div id="greetingOutput"></div>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script><script  src="./script.js"></script>
+            <label for="userName" class="form-label">Try it</label>
+            <input
+              type="text"
+              id="userName"
+              class="form-control"
+              name="userName"
+            />
+            <button id="btnGetFacts"
+             class="btn btn-secondary"
+             style= "background-color: blue; border-color: black; color: white"
+             >
+            Click me!
+            </button>
 
-</body>
+            <br />
+
+            <span id="coolNameFactsOutput"> </span>
+            <img id="coolNameImg" />
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>

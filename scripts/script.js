@@ -1,10 +1,32 @@
 $(document).ready(function () {
-  $("#greetingOutput").text("");
+  console.log("Ready to roll");
 
-  $("#fname")
-    .$("#sendName")
-    .click(function () {
-      //console.log($("#fname").val());
-      $("#greetingOutput").text("Hello " + $("#fname").val());
-    });
+
+  $("#btnGetFacts").click(function () {
+    $("#coolNameFactsOutput").html();
+
+    let userName = $("#userName").val();
+    console.log("user name = ", userName);
+
+    console.log("spirit animal f/n = ", getSpiritAnimal(userName));
+
+    console.log("you clicked the button");
+
+    $("#coolNameFactsOutput").html(getSpiritAnimal(userName));
+
+  });
 });
+
+
+// Spirit animal function
+function getSpiritAnimal(name) {
+
+  
+  return 'Hello, ' + name;
+}
+
+
+
+
+
+
